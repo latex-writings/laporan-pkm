@@ -12,7 +12,7 @@
 \usepackage{courier}  % Courier for monospace
 \usepackage{helvet}   % Helvetica for sans-serif
 \usepackage{amsmath}
-\usepackage[english,indonesian]{babel}
+\usepackage[indonesian]{babel}
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{titlesec}
@@ -22,16 +22,19 @@
 \usepackage{array}
 \usepackage[format=hang,font=footnotesize,labelfont=bf]{caption}
 \usepackage{enumitem}
-\usepackage{parskip}
+\usepackage{indentfirst}
+\setlength{\parindent}{0.75cm}
 \usepackage{fancyhdr}
 \usepackage{tocloft}
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{ragged2e}  % For better text justification in bibliography
+\usepackage[none]{hyphenat} % Non-aktifkan pemenggalan kata (hyphenation)
+\sloppy % Izinkan spasi antar-kata untuk merenggang agar text tidak keluar margin
 
 % Page Setup
 \geometry{
-    top=3cm,
+    top=4cm,
     bottom=3cm,
     left=4cm,
     right=3cm
@@ -53,8 +56,16 @@
 % Header/Footer
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{\thepage}
+\fancyfoot[L]{\footnotesize Pengabdian Kepada Masyarakat Universitas Logistik dan Bisnis Internasional Tahun 2026}
+\fancyfoot[R]{\footnotesize \thepage}
 \renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[L]{\footnotesize Pengabdian Kepada Masyarakat Universitas Logistik dan Bisnis Internasional Tahun 2026}
+    \fancyfoot[R]{\footnotesize \thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
 
 % Hyperref setup
 \hypersetup{
@@ -96,13 +107,13 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 
 % Custom Commands
+\makeatletter
 \newcommand{\myTitle}[1]{\def\@myTitle{#1}}
 \newcommand{\myName}[1]{\def\@myName{#1}}
 \newcommand{\myNIM}[1]{\def\@myNIM{#1}}
 \newcommand{\myYear}[1]{\def\@myYear{#1}}
 
 % Redefine title
-\makeatletter
 % Initialize default values
 \def\@myTitle{Judul Penelitian}
 \def\@myNIM{303012510004}
@@ -111,48 +122,74 @@
 
 \renewcommand{\maketitle}{
     \begin{titlepage}
-        \centering
-        \vspace*{0.5cm}
-        
-        % Judul Penelitian (bagian atas)
-        {\fontsize{16}{20}\selectfont
-        \textbf{Judul Laporan yang Akan di Laporkan}\par}
-        
-        \vspace{1.5cm}
-        
-        % Tahap Ujian Kualifikasi
-        {\fontsize{12}{14}\selectfont
-        \textbf{Proyek / Internship}\par}
-        
-        \vspace{1.5cm}
-        
-        % NIM dan Nama
-        {\fontsize{12}{14}\selectfont
-        \textbf{\@myNIM}\par
-        \textbf{\@myName}\par}
-        
-        \vspace{1.5cm}
-        \vspace{1.5cm}
-        \vspace{1.5cm}
-     
-        
-        % Logo
-        \IfFileExists{logo.png}{
-            \includegraphics[width=0.5\textwidth]{logo.png}
-        }{
-            {\fontsize{16}{19}\bfseries Logo\par}
-        }
-        
-        \vfill
-        
-        % Program Studi dan Informasi
-        {\fontsize{16}{19}\selectfont
-        \textbf{Program Studi Sarjana Terapan Teknik Informatika}\par
-        \textbf{Sekolah Teknologi Informasi}\par
-        \textbf{Universitas Logistik dan Bisnis Internasional}\par
-        \textbf{Bandung}\par
-        \textbf{2026}\par}
-        
+        \thispagestyle{empty}
+        \begin{center}
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            LAPORAN AKHIR\par}
+
+            \vspace{0.4cm}
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            PENGABDIAN KEPADA MASYARAKAT (PKM)\par}
+
+            \vspace{1.5cm}
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            WORKSHOP MACHINE LEARNING\\
+            UNTUK PREDIKSI AWAL KESEHATAN TANAMAN\\
+            MELALUI ANALISIS CITRA DAUN BAGI\\
+            SISWA SMK NEGERI/SWASTA DI KOTA CIMAHI\par}
+
+            \vspace{0.5cm}
+
+            {\fontsize{12}{15}\selectfont\bfseries
+            (Studi Kasus: SMKN 2 Cimahi - Jurusan Rekayasa Perangkat Lunak)\par}
+
+            \vspace{1.2cm}
+
+            % Logo
+            \IfFileExists{figures/logo.png}{
+                \includegraphics[width=0.3\textwidth]{figures/logo.png}
+            }{
+                {\fontsize{16}{19}\bfseries [LOGO ULBI]\par}
+            }
+
+            \vspace{1.2cm}
+
+            {\fontsize{12}{15}\selectfont\bfseries
+            Oleh:\par}
+
+            \vspace{0.6cm}
+
+            {\fontsize{12}{15}\selectfont\bfseries
+            \begin{tabular}{l @{\hspace{0.5cm}} l}
+            Dr. Syafrial Fachri Pane.,S.T.,M.TI.,EBDP.,CDSP.,SFPC & 0416048803 \\[0.2cm]
+            M. Yusril Helmi Setyawan, S.Kom., M.Kom.,SFPC. & 0407117405 \\[0.2cm]
+            Amri Yanuar,ST.,M.MoT & 0415048901
+            \end{tabular}\par}
+
+            \vfill
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            SEKOLAH TEKNOLOGI INFORMASI\par}
+
+            \vspace{0.3cm}
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            UNIVERSITAS LOGISTIK DAN BISNIS INTERNASIONAL\par}
+
+            \vspace{0.3cm}
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            BANDUNG\par}
+
+            \vspace{0.3cm}
+
+            {\fontsize{14}{17}\selectfont\bfseries
+            2026\par}
+
+        \end{center}
     \end{titlepage}
     \newpage
 }
@@ -187,29 +224,21 @@
     {}
     {}
 
-% Bibliography Style - APA-like with BibTeX
+% Bibliography Style - IEEE with BibTeX
 \usepackage[
-    backend=bibtex,   % Menggunakan BibTeX (biber tidak berfungsi di sistem ini)
-    style=authoryear, % Author-year citation style (APA-like)
-    sorting=nyt,      % Sort by name, year, title
-    maxbibnames=99,   % Tampilkan semua nama penulis
-    dashed=false,     % Jangan gunakan dash untuk author yang sama
+    backend=bibtex,   % Menggunakan BibTeX
+    style=numeric,    % Citation style numeric (sebagai pengganti IEEE yang tidak terinstal)
     url=false,        % Jangan tampilkan URL
     doi=true,         % Tampilkan DOI
 ]{biblatex}
 
 \urlstyle{same} % Samakan font URL/DOI dengan teks utama
 
-\addbibresource{references.bib}
-\addbibresource{include.bib}
-%\addbibresource{visualdecoding.bib} % Uncomment jika ingin menggunakan file bib tambahan
+\addbibresource{references-PkM.bib}
 
-% Make \cite behave like \parencite (with parentheses)
-\let\cite\parencite
+% Make \parencite behave like \cite (brackets [1])
+% \let\parencite\cite (removed to avoid undefined command error)
 
-% Custom citation formatting
-\renewcommand*{\finalnamedelim}{\addspace\&\addspace}  % Ubah "and" jadi "&"
-\renewcommand*{\nameyeardelim}{\addcomma\space}        % Tambahkan koma setelah author
 
 % Remove "In:" from bibliography
 \renewbibmacro{in:}{}
@@ -232,7 +261,7 @@
 
 
 % Set document metadata
-\myTitle{Judul Penelitian Anda}
+\myTitle{Judul Laporan Uji Coba}
 \myNIM{303012510004}
 \myName{Rolly Maulana Awangga}
 \myYear{2026}
@@ -254,6 +283,12 @@
 % Halaman Depan menggunakan angka Romawi
 \pagenumbering{roman}
 
+% Halaman Pengesahan
+\input{chapters/pengesahan}
+
+% Halaman Keterlibatan Mahasiswa
+\input{chapters/keterlibatan_mahasiswa}
+
 % DAFTAR ISI
 \phantomsection
 \addcontentsline{toc}{section}{DAFTAR ISI}
@@ -272,11 +307,6 @@
 \listoffigures
 \clearpage
 
-% DAFTAR RUMUS
-\phantomsection
-\addcontentsline{toc}{section}{DAFTAR RUMUS}
-\listofequations
-\clearpage
 
 % RINGKASAN
 \clearpage

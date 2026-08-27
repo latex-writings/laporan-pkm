@@ -1,31 +1,109 @@
-\subsection{Latar Belakang dan Motivasi Penelitian}
+\subsection{Analisis Situasi Permasalahan}
 
-\begin{background}
-Pada bagian ini, jelaskan \textit{rationale} atau motivasi yang melatarbelakangi pemilihan topik penelitian. Bagian ini dapat menjelaskan tren penelitian atau berdasarkan referensi dari topik yang menjadi minat Anda \parencite{example2023}. Sertakan juga rujukan dari referensi yang menjadi acuan latar belakang penelitian Anda \parencite{textbook2020}.
+Perkembangan teknologi digital saat ini menuntut penguatan kompetensi sumber daya manusia di bidang \textit{Artificial Intelligence} (AI) dan \textit{Machine Learning} (ML) \parencite{Nadzinski2023}. Hal ini menjadi tantangan besar bagi pendidikan vokasional seperti Sekolah Menengah Kejuruan (SMK) untuk menyesuaikan kurikulumnya \parencite{Utomo2024}. Siswa SMK Jurusan Rekayasa Perangkat Lunak (RPL) yang selama ini difokuskan pada pemrograman konvensional, kini dituntut untuk memahami teknologi berbasis data guna memenuhi kebutuhan industri digital \parencite{Hidayat2026, Andriani2025}. Kesenjangan antara kompetensi dasar pemrograman siswa dengan tuntutan industri inilah yang menjadi urgensi utama dari program Pengabdian kepada Masyarakat (PkM) ini.
 
-\textbf{Isi:} 100-200 kata, minimal 1 paragraf.
-\end{background}
+Mitra kegiatan PkM ini adalah SMKN 2 Cimahi Jurusan RPL, yang mana siswanya telah memiliki dasar logika komputasi namun belum pernah mengimplementasikan \textit{Machine Learning} secara menyeluruh (\textit{end-to-end}). Keterbatasan akses terhadap media pembelajaran ML yang praktis dan aplikatif menjadi kendala utama. Kegiatan ini juga merupakan keberlanjutan kerja sama antara Universitas Logistik dan Bisnis Internasional (ULBI) dengan SMKN 2 Cimahi, yang sebelumnya telah sukses menerapkan metode \textit{Project-Based Learning} (PjBL) pada pelatihan pengembangan web \parencite{PANE2025}.
 
-\subsection{Ringkasan Penelitian Terkait}
+Untuk menjawab permasalahan tersebut, diselenggarakan Workshop \textit{Machine Learning} untuk Prediksi Awal Kesehatan Tanaman melalui Analisis Citra Daun \parencite{Imanulloh2023, MarwanRamdhanyEdy2025}. Studi kasus ini dipilih karena sifatnya yang visual, menggunakan dataset terbuka, dan relevan dengan penerapan \textit{Computer Vision} sehari-hari. Pelatihan ini dirancang secara praktis menggunakan lingkungan \textit{cloud Google Colab} \parencite{Handayani2025, Nugrahanti2025} dan \textit{Streamlit} agar materi yang kompleks dapat diakses secara mudah tanpa memerlukan perangkat keras tingkat tinggi. 
 
-\begin{literaturereview}
-Bagian ini berisi \textit{brief literature review}. Jelaskan penelitian-penelitian terkait hasil telaah terhadap penelitian sebelumnya yang paling mendekati dengan topik atau latar belakang penelitian Anda \parencite{conference2022}. Jelaskan juga keunggulan dan kekurangan dari penelitian sebelumnya, serta peluang penelitian lanjutan. Sertakan sitasi dari referensi utama.
+Melalui PjBL \parencite{Wahyudi2024, Wibowo2026}, siswa dibimbing membangun proyek ML secara terpadu, dari prapemrosesan citra hingga pembuatan antarmuka aplikasi. Peserta juga diajarkan berpikir kritis bahwa model ini hanyalah alat \textit{screening} awal, bukan diagnosis final. Pada akhirnya, program ini bertujuan mengurangi kesenjangan kompetensi, meningkatkan literasi AI \parencite{Panjaitan2025}, serta menyediakan portofolio dan modul pembelajaran berkelanjutan bagi sekolah.
 
-\textbf{Isi:} 100-200 kata, minimal 2-3 paragraf.
-\end{literaturereview}
+\subsection{Permasalahan Mitra}
 
-\subsection{Potensi Gap Penelitian atau Masalah yang Akan Diangkat}
+Berdasarkan analisis situasi, SMKN 2 Cimahi Jurusan Rekayasa Perangkat Lunak (RPL) memiliki dasar kompetensi pemrograman dan logika komputasi. Namun, tren industri menuju \textit{Artificial Intelligence} (AI) dan \textit{Machine Learning} (ML) mengharuskan peningkatan kompetensi siswa agar tetap relevan. Terdapat lima permasalahan prioritas yang dihadapi mitra:
 
-\begin{researchgap}
-Pada bagian ini, tuliskan identifikasi permasalahan atau potensi gap dari fenomena yang akan diangkat dalam penelitian berdasarkan latar belakang dan penelitian terkait. Jelaskan kesenjangan yang belum teratasi oleh penelitian sebelumnya dan bagaimana penelitian Anda akan mengatasinya.
+\begin{enumerate}
+    \item \textbf{Keterbatasan Materi Praktis \textit{Machine Learning} dan \textit{Computer Vision}}\\
+    Pembelajaran RPL saat ini berfokus pada pengembangan perangkat lunak konvensional. Siswa belum memperoleh pengalaman membangun sistem berbasis kecerdasan buatan, sehingga timbul kesenjangan antara kemampuan dasar yang dimiliki dengan tuntutan industri digital \parencite{Utomo2024, Hidayat2026}.
 
-\textbf{Isi:} 100-200 kata, minimal 1 paragraf.
-\end{researchgap}
+    \item \textbf{Keterbatasan Akses \textit{Tools}, \textit{Dataset}, dan Referensi}\\
+    Siswa memerlukan lingkungan belajar ML yang aplikatif tanpa konfigurasi rumit. Terbatasnya akses ini menuntut pemanfaatan \textit{platform cloud} seperti \textit{Google Colab} \parencite{Handayani2025, Nugrahanti2025} dan \textit{dataset} publik (\textit{PlantVillage}) agar pembelajaran ML lebih mudah diakses dan dipraktikkan.
 
-\subsection{Potensi Kebaruan dari Penelitian yang Akan Dilakukan}
+    \item \textbf{Belum Ada Pengalaman Membangun \textit{Pipeline ML} Secara \textit{End-to-End}}\\
+    Pendidikan vokasi umumnya masih bertumpu pada pemrograman berbasis aturan (\textit{rule-based}). Siswa belum berpengalaman menjalankan siklus utuh ML \parencite{Wibowo2026}, mulai dari eksplorasi data, praproses citra, pelatihan model, evaluasi, hingga integrasi ke dalam bentuk aplikasi utuh.
 
-\begin{novelty}
-Pada bagian ini, tuliskan bagaimana Anda membuktikan bahwa penelitian yang diajukan adalah baru dan orisinal (\textit{novel dan original}). Bagian ini dapat diisi dengan hasil \textit{systematic mapping study} atau \textit{meta analysis} untuk memetakan usulan topik penelitian terhadap teori atau metode terkini, sehingga dapat dibuktikan \textit{novelty} dan \textit{originality}-nya.
+    \item \textbf{Minimnya Portofolio Berbasis AI}\\
+    Portofolio proyek merupakan syarat penting untuk memasuki dunia kerja atau jenjang pendidikan lanjutan. Saat ini, siswa belum memiliki proyek nyata berbasis \textit{Machine Learning} yang dapat melengkapi portofolio digital mereka \parencite{Ali2025, Panjaitan2025}.
 
-\textbf{Isi:} 400-500 kata, minimal 3-5 paragraf.
-\end{novelty}
+    \item \textbf{Kurangnya Pemahaman Implementasi Nyata}\\
+    Konsep AI masih dipahami secara abstrak. Siswa membutuhkan studi kasus nyata, seperti prediksi awal kesehatan tanaman lewat citra daun \parencite{Imanulloh2023, MarwanRamdhanyEdy2025}, untuk memahami penerapan \textit{Computer Vision}. Mereka juga perlu diedukasi bahwa hasil prediksi model sekadar alat bantu (\textit{screening tool}), bukan keputusan akhir.
+\end{enumerate}
+
+Kesimpulannya, mitra sangat membutuhkan program yang tidak hanya membekali pemahaman konseptual AI, tetapi juga pengalaman praktik langsung lewat \textit{Project-Based Learning} \parencite{Wahyudi2024}. Workshop \textit{Machine Learning} ini dirancang sebagai solusi tepat guna menjembatani kesenjangan kompetensi tersebut \parencite{Andriani2025}.
+
+\subsection{Tujuan Pengabdian}
+
+Kegiatan Pengabdian kepada Masyarakat (PkM) ini secara umum bertujuan untuk meningkatkan kompetensi siswa SMKN 2 Cimahi, khususnya Jurusan Rekayasa Perangkat Lunak (RPL), dalam memahami dan mengimplementasikan teknologi \textit{Artificial Intelligence} (AI), \textit{Machine Learning} (ML), dan \textit{Computer Vision} (CV). Pendekatan yang digunakan adalah pembelajaran berbasis proyek atau \textit{Project-Based Learning} (PjBL) \parencite{PANE2025, Wahyudi2024}. Program ini menjadi bentuk nyata transfer pengetahuan dan keterampilan dari perguruan tinggi kepada mitra sekolah, guna memperkuat kesiapan vokasional siswa dalam menghadapi tantangan industri digital masa depan \parencite{Nadzinski2023}.
+
+Secara khusus, tujuan pelaksanaan PkM ini diuraikan sebagai berikut:
+
+\begin{enumerate}
+    \item \textbf{Meningkatkan Pemahaman Konsep Dasar AI dan ML}\\
+    Memberikan pemahaman fundamental mengenai konsep kecerdasan buatan, model prediksi, dan pengelolaan data. Tujuannya adalah agar siswa memahami prinsip kerja di balik teknologi tersebut, sehingga mereka tidak sekadar bertindak sebagai pengguna, melainkan sebagai perancang solusi berbasis AI \parencite{TofanDwiTjahyono2025, Panjaitan2025}.
+
+    \item \textbf{Memberikan Pengalaman Praktis Melalui Analisis Citra}\\
+    Membimbing siswa secara langsung dalam mengembangkan sistem \textit{Machine Learning} sederhana. Melalui studi kasus prediksi awal kesehatan tanaman menggunakan citra daun, siswa diajak mengenali alur teknis yang dapat diaplikasikan pada permasalahan dunia nyata \parencite{Imanulloh2023}.
+
+    \item \textbf{Memperkenalkan \textit{Pipeline} ML Secara \textit{End-to-End}}\\
+    Mengedukasi siswa mengenai keseluruhan siklus pengembangan sistem \textit{Machine Learning}, mulai dari tahap persiapan dan prapemrosesan \textit{dataset}, pelatihan model, pengujian performa, hingga integrasi antarmuka aplikasi. Hal ini menumbuhkan pola pikir komprehensif terkait rekayasa perangkat lunak modern \parencite{Wibowo2026}.
+
+    \item \textbf{Menghasilkan Produk Portofolio Berbasis AI}\\
+    Mendorong siswa untuk menciptakan proyek nyata yang membuktikan penguasaan mereka terhadap \textit{Computer Vision}. Produk ini nantinya dapat menjadi portofolio kompetensi digital yang menjadi nilai tambah besar saat mereka memasuki dunia kerja \parencite{Ali2025}.
+
+    \item \textbf{Meningkatkan Literasi Implementasi di Dunia Nyata}\\
+    Memperluas wawasan pemanfaatan AI pada sektor-sektor esensial, salah satunya bidang pertanian. Melalui implementasi tersebut, siswa diedukasi bahwa sistem ML berfungsi secara ideal sebagai alat bantu pengambilan keputusan (\textit{screening tool}) berbasis data, bukan penentu diagnosis akhir \parencite{MarwanRamdhanyEdy2025}.
+
+    \item \textbf{Mengevaluasi Peningkatan Kompetensi Peserta}\\
+    Mengukur efektivitas pelaksanaan pelatihan melalui serangkaian instrumen penilaian, seperti \textit{pre-test}, \textit{post-test}, serta observasi langsung terhadap kelancaran praktik peserta selama \textit{workshop} berlangsung \parencite{Utomo2024}.
+\end{enumerate}
+
+Pencapaian tujuan tersebut diharapkan berkontribusi nyata mencetak lulusan SMK yang adaptif, melek AI, dan mampu memberikan solusi teknis berbasis data \parencite{Andriani2025}.
+
+\subsection{Manfaat Pengabdian}
+
+Kegiatan Pengabdian kepada Masyarakat (PkM) melalui \textit{Workshop Machine Learning} ini memberikan manfaat berorientasi pada peningkatan kompetensi, transfer pengetahuan, serta perluasan ekosistem pembelajaran digital. Manfaat ini dikelompokkan sebagai berikut:
+
+\begin{enumerate}
+    \item \textbf{Bagi Siswa SMKN 2 Cimahi}\\
+    Meningkatkan keterampilan praktis siswa di bidang \textit{Artificial Intelligence} (AI), \textit{Machine Learning} (ML), dan \textit{Computer Vision} (CV). Pengalaman mengolah citra dan mengevaluasi model prediksi mengasah \textit{computational thinking} serta menghasilkan portofolio krusial untuk dunia kerja \parencite{Utomo2024, Hidayat2026}.
+
+    \item \textbf{Bagi Guru dan Sekolah Mitra}\\
+    Memperkaya referensi bahan ajar kurikulum Rekayasa Perangkat Lunak. Kegiatan ini memfasilitasi penerapan \textit{Project-Based Learning} melalui studi kasus nyata \parencite{PANE2025, Wahyudi2024}, sekaligus memperkokoh kerja sama sekolah dengan universitas dalam mencetak lulusan adaptif \parencite{Nirawana2026}.
+
+    \item \textbf{Bagi Mahasiswa Pendamping}\\
+    Memberikan wadah implementasi keilmuan akademik secara langsung. Mahasiswa dapat mengasah keterampilan komunikasi, kerja sama tim, penyelesaian masalah teknis, serta pengalaman mengaplikasikan ML dalam edukasi publik.
+
+    \item \textbf{Bagi Universitas Logistik dan Bisnis Internasional}\\
+    Menjadi wujud implementasi Tridarma Perguruan Tinggi dalam memperluas literasi teknologi masyarakat. Jejaring kerja sama dengan pendidikan menengah terbuka lebih luas, memfasilitasi riset terapan dan inovasi pembelajaran AI di masa mendatang \parencite{Ali2025}.
+
+    \item \textbf{Bagi Pengembangan Ilmu Pengetahuan}\\
+    Mendemonstrasikan potensi penerapan AI lintas disiplin, khususnya pemanfaatan \textit{Computer Vision} di sektor pertanian. Hal ini membuktikan bahwa ML esensial untuk mendukung analisis visual dan pengambilan keputusan di berbagai bidang kehidupan \parencite{Imanulloh2023, MarwanRamdhanyEdy2025}.
+\end{enumerate}
+
+Rangkaian manfaat ini menunjukkan bahwa program PkM tidak sekadar menjembatani kesenjangan kompetensi teknis, tetapi juga sukses membangun ekosistem pembelajaran inovatif yang berkelanjutan.
+
+\subsection{Luaran Pengabdian}
+
+Pelaksanaan kegiatan PkM \textit{Workshop Machine Learning} untuk Prediksi Awal Kesehatan Tanaman melalui Analisis Citra Daun ini tidak sekadar berfokus pada pelatihan semata, melainkan dirancang untuk menghasilkan sejumlah luaran konkret (terukur). Luaran tersebut berfungsi sebagai bukti fisik kelancaran program, media pembelajaran berkelanjutan, dan sarana diseminasi keilmuan. 
+
+Adapun rincian luaran yang dicapai adalah sebagai berikut:
+
+\begin{enumerate}
+    \item \textbf{Peningkatan Kompetensi Peserta}\\
+    Luaran utama berupa meningkatnya kapasitas siswa RPL SMKN 2 Cimahi di bidang \textit{Artificial Intelligence} (AI) dan \textit{Machine Learning} (ML). Keberhasilan ini dibuktikan dan dievaluasi secara kuantitatif melalui instrumen \textit{pre-test} dan \textit{post-test} \parencite{Utomo2024}.
+    
+    \item \textbf{Modul Pembelajaran \textit{Machine Learning}}\\
+    Tersusunnya modul cetak maupun digital yang memuat materi \textit{end-to-end}, dari pengenalan AI, praproses citra, hingga implementasi aplikasi sederhana. Modul ini dirancang aplikatif agar dapat didaur ulang sebagai referensi bahan ajar kurikulum vokasi \parencite{PANE2025}.
+
+    \item \textbf{Proyek Implementasi \textit{Computer Vision}}\\
+    Luaran produk berupa purwarupa proyek prediksi kesehatan daun tanaman berbasis \textit{Machine Learning}. Proyek ini membuktikan kemampuan siswa dalam mengonversi pemahaman teoritis menjadi solusi nyata lewat \textit{Project-Based Learning} \parencite{Wahyudi2024, Imanulloh2023}.
+
+    \item \textbf{Lingkungan Praktik Berbasis \textit{Cloud}}\\
+    Penggunaan \textit{platform cloud Google Colab} membebaskan sekolah dari kendala spesifikasi perangkat keras. Lingkungan praktik ini menjadi luaran metode yang dapat terus digunakan peserta secara mandiri pasca-kegiatan \parencite{Handayani2025, Nugrahanti2025}.
+
+    \item \textbf{Data Evaluasi dan Dokumentasi Kegiatan}\\
+    Luaran administratif yang mencakup data evaluasi \textit{pre-test/post-test}, daftar hadir, serta ragam dokumentasi foto selama \textit{workshop}. Seluruh data ini menjadi landasan pelaporan pertanggungjawaban serta rujukan penyusunan riset terapan di masa depan.
+
+    \item \textbf{Publikasi Artikel Ilmiah}\\
+    Luaran akademis berupa naskah publikasi yang merangkum hasil implementasi \textit{Project-Based Learning} AI pada tingkat menengah \parencite{Panjaitan2025}. Artikel ini ditargetkan terbit pada jurnal pengabdian masyarakat terakreditasi sebagai bentuk diseminasi praktik baik dari kegiatan PkM ULBI \parencite{Ali2025}.
+\end{enumerate}

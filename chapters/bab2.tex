@@ -1,41 +1,47 @@
-\subsection{State-of-the-Art Penelitian}
+\subsection{Pengertian/Teori Terkait Topik}
 
-Bagian ini menjabarkan hasil \textit{systematic literature review} terhadap referensi utama serta yang berkaitan dengan topik penelitian \parencite{lawoyin2014}. Bagian ini ditulis minimal \textbf{4000 kata} dan maksimal \textbf{5000 kata}, dalam beberapa paragraf (fleksibel).
+\subsubsection{\textit{Artificial Intelligence}}
+\textit{Artificial Intelligence} (AI) atau kecerdasan buatan merupakan cabang ilmu komputer yang berfokus pada pengembangan sistem dengan kemampuan intelektual layaknya manusia, seperti pengenalan pola, analisis, dan pengambilan keputusan berdasarkan pengalaman \parencite{Nadzinski2023, Panjaitan2025}. Berbeda dengan komputasi konvensional berbasis aturan eksplisit, sistem AI mengandalkan data sebagai sumber pembelajaran. Pada program Pengabdian kepada Masyarakat (PkM) ini, AI diperkenalkan sebagai fondasi teknologi modern untuk memecahkan permasalahan riil melalui pendekatan algoritmik.
 
-Pada bagian ini \textbf{diakhiri dengan tabel} \textit{state-of-the-art} yang berisi ringkasan dari hasil \textit{systematic literature review}. Sumber pustaka atau referensi primer yang relevan dengan mengutamakan hasil penelitian ilmiah atau teknologi yang terkini. Disarankan penggunaan sumber pustaka 5 tahun terakhir (untuk prosiding konferensi) dan 10 tahun terakhir (bergantung pada relevansi teori atau metode) untuk jurnal atau buku teks.
+\subsubsection{\textit{Machine Learning}}
+\textit{Machine Learning} (ML) adalah subbidang AI yang memungkinkan komputer menemukan pola pada data guna menghasilkan prediksi secara adaptif \parencite{TofanDwiTjahyono2025}. Proses pengembangannya mencakup siklus terstruktur: pengumpulan data, praproses, pemilihan metode, pelatihan model (\textit{training}), evaluasi, hingga implementasi \parencite{Wibowo2026}. Kerangka \textit{end-to-end} inilah yang menjadi materi utama \textit{workshop} bagi para siswa.
 
-Pada bagian akhir tabel, sebutkan usulan penelitian Anda untuk melihat posisi penelitian Anda dalam \textit{state-of-the-art} penelitian.
+\subsubsection{\textit{Deep Learning}}
+Sebagai evolusi mutakhir dari ML, \textit{Deep Learning} mengeksploitasi arsitektur jaringan saraf tiruan berlapis (\textit{Deep Neural Network}) untuk mempelajari data secara masif dan hierarkis. Keunggulannya terletak pada kemampuan ekstraksi fitur otomatis, terutama melalui varian algoritma \textit{Convolutional Neural Network} (CNN) yang sangat tangguh dalam memproses data spasial seperti citra digital \parencite{Nadzinski2023}.
 
-\begin{table}[htbp]
-    \caption{State-of-the-Art Penelitian}
-    \label{tab:sota}
-    \small
-    \begin{tabularx}{\textwidth}{@{} c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}l @{}}
-    \toprule
-    \textbf{No} & \textbf{Peneliti} & \textbf{Objective} & \textbf{Metode \& Hasil} & \textbf{Keterangan} \\
-    \midrule
-    
-    1 & \textcite{lawoyin2014} & 
-    Analisis sistem Holter EEG 3D secara real-time. & 
-    Pengolahan sinyal EEG dengan HPF, NFFT. Klasifikasi SVM. & 
-    Metode dasar \\
-    
-    \addlinespace
-    
-    2 & \textcite{example2023} & 
-    Meningkatkan akurasi deteksi kantuk. & 
-    Menggunakan Deep Learning (CNN) dengan dataset XYZ. Akurasi 95\%. & 
-    Metode modern \\
-    
-    \addlinespace
-    
-    3 & \textcite{textbook2020} & 
-    Teori dasar pengukuran sinyal biomedis. & 
-    Menjelaskan prinsip kerja EEG dan EKG konvensional. & 
-    Referensi teori \\
-    
-    \bottomrule
-    \end{tabularx}
-\end{table}
+\subsubsection{\textit{Computer Vision}}
+\textit{Computer Vision} (CV) memberdayakan komputer untuk "melihat" dan mengekstraksi informasi dari data visual (gambar atau video) \parencite{Imanulloh2023}. Penerapannya sangat luas, mulai dari identifikasi objek hingga analisis medis. Di sektor agrikultur, teknologi ini dimanfaatkan secara esensial untuk memantau perubahan morfologis tanaman secara dini \parencite{MarwanRamdhanyEdy2025}.
 
-Berdasarkan \textit{state-of-the-art} yang dibuat, berikan penjelasan tentang potensi gap penelitian yang dapat diangkat untuk penelitian Anda. Gunakan lebih dari satu tabel \textit{state-of-the-art} jika terdapat beberapa metode atau teori yang digunakan dari hasil eksplorasi Anda.
+\subsubsection{Analisis dan Klasifikasi Citra Digital}
+Citra digital merupakan kumpulan nilai matriks numerik (piksel). Analisis citra melibatkan tahapan akuisisi, peningkatan kualitas (\textit{preprocessing}), ekstraksi fitur, hingga tahap klasifikasi atau pemberian kategori \parencite{Wibowo2026, Andriani2025}. Dalam kegiatan ini, siswa mempraktikkan langsung klasifikasi biner untuk membedakan sampel daun sehat dan daun yang terjangkit anomali penyakit.
+
+\subsubsection{Prediksi Awal Kesehatan Tanaman melalui Analisis Citra}
+Kelainan visual pada daun, seperti perubahan pigmen maupun kemunculan lesi, sering kali menjadi gejala awal infeksi patogen. Melalui ML, pola anomali visual tersebut dikenali secara presisi dan cepat \parencite{MarwanRamdhanyEdy2025}. Meski demikian, model ini secara fundamental beroperasi sebagai alat \textit{screening} pendukung keputusan (\textit{decision support tool}), bukan diagnosis definitif yang menggantikan analisis ahli botani \parencite{Imanulloh2023}.
+
+\subsubsection{\textit{Project-Based Learning} dalam Pembelajaran Teknologi}
+\textit{Project-Based Learning} (PjBL) menempatkan peserta didik sebagai inisiator pemecahan masalah riil melalui pengerjaan proyek konkret \parencite{Wahyudi2024}. Pendekatan ini efektif menjembatani jurang teoretis dan pragmatis, mengasah \textit{computational thinking}, melatih kolaborasi, serta membekali siswa vokasi dengan portofolio artefak teknologi siap guna \parencite{PANE2025, Ali2025}.
+
+\subsection{Tinjauan Pustaka Sesuai Topik Permasalahan}
+
+Perkembangan teknologi \textit{Artificial Intelligence} (AI), khususnya \textit{Machine Learning} (ML) dan \textit{Computer Vision} (CV), mendisrupsi berbagai sektor esensial termasuk pendidikan dan pertanian \parencite{Nadzinski2023}. Bagi pendidikan vokasi seperti Sekolah Menengah Kejuruan (SMK), penguatan kompetensi digital ini merupakan strategi krusial agar lulusan tidak sekadar menguasai pemrograman konvensional, tetapi juga adaptif terhadap teknologi masa depan berbasis data \parencite{Utomo2024, Andriani2025}.
+
+\subsubsection{Perkembangan AI dalam Pendidikan Vokasi}
+Transformasi industri menuntut institusi pendidikan untuk menyelaraskan kurikulum dengan tren teknologi \parencite{Utomo2024}. Pengenalan AI di tingkat vokasi bertujuan meningkatkan literasi teknologi melalui pendekatan praktis. Dalam PkM ini, AI diperkenalkan kepada siswa SMKN 2 Cimahi bukan untuk menggantikan dasar pemrograman yang ada, melainkan sebagai ekspansi kompetensi menuju pengembangan sistem cerdas \parencite{TofanDwiTjahyono2025}.
+
+\subsubsection{\textit{Machine Learning} sebagai Kompetensi Masa Depan}
+Berbeda dengan pemrograman berbasis aturan (\textit{rule-based}), ML memungkinkan komputer memodelkan solusi secara mandiri dari kumpulan data \parencite{Panjaitan2025}. Konsep abstraksi data ini seringkali menjadi tantangan bagi pemula. Oleh sebab itu, pendekatan pembelajaran dirancang aplikatif melalui studi kasus riil, sehingga siswa dapat mengontekstualisasikan algoritma matematis menjadi solusi nyata \parencite{Wibowo2026}.
+
+\subsubsection{\textit{Project-Based Learning} untuk Peningkatan Kompetensi}
+\textit{Project-Based Learning} (PjBL) terbukti sangat efektif dalam pendidikan vokasional karena berpusat pada pemecahan masalah konkret \parencite{Wahyudi2024}. Metode ini memandu siswa secara terstruktur: dari identifikasi masalah, perancangan solusi, hingga evaluasi produk akhir. PjBL memastikan siswa memahami bahwa AI adalah sebuah proses analitis komprehensif, bukan sekadar implementasi kode instan \parencite{PANE2025}.
+
+\subsubsection{Penerapan \textit{Computer Vision} untuk Kesehatan Tanaman}
+Sektor pertanian telah banyak mengadopsi \textit{Computer Vision} untuk automasi deteksi anomali pada tanaman melalui analisis tekstur dan warna daun \parencite{Imanulloh2023}. Pemanfaatan studi kasus pertanian ini memberikan dimensi kontekstual yang mudah dipahami siswa. Citra daun berfungsi sebagai media pembelajaran yang ideal untuk mendemonstrasikan bagaimana data visual dikonversi menjadi prediksi bernilai tinggi \parencite{MarwanRamdhanyEdy2025}.
+
+\subsubsection{Pemanfaatan \textit{Dataset} Terbuka dalam Pembelajaran}
+Ketersediaan data berkualitas adalah tulang punggung keberhasilan sistem ML. Pemanfaatan \textit{open dataset} mengeliminasi hambatan sumber daya dan waktu dalam fase pengumpulan data, memungkinkan siswa untuk langsung bereksperimen dengan tahapan prapemrosesan dan pelatihan model secara efisien \parencite{Nugrahanti2025}. Pendekatan ini mempercepat pemahaman alur kerja ML tanpa mengurangi substansi teknis.
+
+\subsubsection{Peningkatan Literasi Digital Tingkat Lanjut}
+Pengenalan praktis terkait ML akan mentransformasi siswa dari sekadar "konsumen" produk digital menjadi "kreator" yang kritis terhadap cara kerja teknologi \parencite{Panjaitan2025}. Melalui interaksi langsung dengan model AI, rasa ingin tahu siswa terstimulasi, yang pada akhirnya bermuara pada kesiapan mereka menghadapi disrupsi otomatisasi industri \parencite{Ali2025}.
+
+\subsubsection{Relevansi Tinjauan Pustaka dengan Permasalahan Mitra}
+Secara keseluruhan, kesenjangan kompetensi yang dialami siswa SMKN 2 Cimahi dalam hal implementasi AI secara menyeluruh (\textit{end-to-end}) dapat dijawab melalui pendekatan \textit{Project-Based Learning} berbantuan perangkat \textit{cloud} \parencite{Handayani2025}. Kegiatan PkM ini dirancang dengan dasar akademis yang solid, mengintegrasikan urgensi kompetensi industri dengan teknologi strategis untuk mencetak lulusan SMK yang unggul di era transformasi digital \parencite{Andriani2025}.
